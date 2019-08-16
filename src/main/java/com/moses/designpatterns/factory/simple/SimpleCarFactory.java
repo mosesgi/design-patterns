@@ -7,6 +7,9 @@ import com.moses.designpatterns.entities.cars.BenzCar;
 
 import java.security.InvalidParameterException;
 
+/**
+ * 简单工厂 - 静态方法工厂
+ */
 public class SimpleCarFactory {
     public static final String BMW = "BMW";
     public static final String BENZ = "BENZ";
@@ -22,6 +25,19 @@ public class SimpleCarFactory {
         } else {
             throw new InvalidParameterException("参数有误,无法造车!");
         }
+    }
+
+    //多方法工厂
+    public static Car produceBmwCar(){
+        return new BMWCar();
+    }
+
+    public static Car produceBenzCar(){
+        return new BenzCar();
+    }
+
+    public static Car produceAudiCar(){
+        return new AudiCar();
     }
 
     public static void main(String[] args) {
