@@ -1,5 +1,8 @@
 package com.moses.designpatterns.decorator;
 
+/**
+ * 装饰器模式
+ */
 public class DecoratorTest {
 
     static void printCoffee(Coffee coffee){

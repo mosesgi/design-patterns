@@ -1,5 +1,8 @@
 package com.moses.designpatterns.facade;
 
+/**
+ * 门面模式/外观模式
+ */
 public class Facade {
     private AirConditioner ac;
     private Light light;
