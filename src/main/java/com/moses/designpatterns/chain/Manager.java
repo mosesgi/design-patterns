@@ -1,8 +1,8 @@
 package com.moses.designpatterns.chain;
 
 public class Manager extends Approver {
-    public Manager() {
-        super(1000);
+    public Manager(Approver superiorManager) {
+        super(1000, superiorManager);
     }
 
     @Override

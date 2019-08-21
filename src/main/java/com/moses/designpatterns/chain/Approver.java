@@ -4,8 +4,9 @@ public abstract class Approver {
     private int authorizedExpense;
     private Approver superiorManager;
 
-    public Approver(int authorizedExpense){
+    public Approver(int authorizedExpense, Approver superiorManager){
         this.authorizedExpense = authorizedExpense;
+        this.superiorManager = superiorManager;
     }
 
     protected abstract void reply(Employee employee);

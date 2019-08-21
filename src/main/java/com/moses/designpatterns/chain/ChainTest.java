@@ -7,12 +7,9 @@ public class ChainTest {
     public static void main(String[] args) {
         Employee emp = new Employee((int) (Math.random() * 13000));
 
-        Approver manager = new Manager();
-        Approver sManager = new SeniorManager();
-        Approver gm = new GeneralManager();
-
-        manager.setSuperiorManager(sManager);
-        sManager.setSuperiorManager(gm);
+        Approver gm = new GeneralManager(null);
+        Approver sManager = new SeniorManager(gm);
+        Approver manager = new Manager(sManager);
 
         manager.handleRequest(emp);
     }
