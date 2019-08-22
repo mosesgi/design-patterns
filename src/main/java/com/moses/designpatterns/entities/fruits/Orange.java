@@ -2,6 +2,7 @@ package com.moses.designpatterns.entities.fruits;
 
 import com.moses.designpatterns.entities.Fruit;
 import com.moses.designpatterns.entities.bags.OrangeBag;
+import com.moses.designpatterns.visit.Visit;
 
 public class Orange implements Fruit {
     private int price = 70;
@@ -15,6 +16,11 @@ public class Orange implements Fruit {
     @Override
     public int price() {
         return price;
+    }
+
+    @Override
+    public int accept(Visit visit) {
+        return visit.sell(this);
     }
 
     public void setPrice(int price) {

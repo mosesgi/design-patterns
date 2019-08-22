@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * JDK Proxy API usage. 代理模式
+ * JDK Proxy API usage, 动态代理. 代理模式
  */
 public class YellowCow implements InvocationHandler {
     private Person person;      //被代理对象
